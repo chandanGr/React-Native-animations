@@ -6,6 +6,7 @@ import Index from "./src/Index"
 import First from "./src/First"
 import Second from "./src/Second"
 import Third from "./src/Third"
+import Fourth from "./src/Fourth"
 
 export default class animation extends Component {
 
@@ -20,6 +21,8 @@ export default class animation extends Component {
         return (<Second navigator = {navigator} title = "Second animation" />);
       case "Third":
         return(<Third navigator = {navigator} title = "Third animation" />);
+      case "Fourth": 
+        return(<Fourth navigator = {navigator} title = "Fourth animation" />);
     }
   }
 
