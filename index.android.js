@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {Animated, LayoutAnimation, Easing, AppRegistry, StyleSheet, Text, Image, TouchableOpacity,
          View, StackNavigator, Navigator, Button,
@@ -11,6 +5,7 @@ import {Animated, LayoutAnimation, Easing, AppRegistry, StyleSheet, Text, Image,
 import Index from "./src/Index"
 import First from "./src/First"
 import Second from "./src/Second"
+import Third from "./src/Third"
 
 export default class animation extends Component {
 
@@ -23,6 +18,8 @@ export default class animation extends Component {
         return (<First navigator = {navigator} title = "First animation" />);
       case "Second":
         return (<Second navigator = {navigator} title = "Second animation" />);
+      case "Third":
+        return(<Third navigator = {navigator} title = "Third animation" />);
     }
   }
 

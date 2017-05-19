@@ -16,6 +16,11 @@ export default class Index extends Component{
             id : "Second"
         });
     }
+    _onPressThird(){
+        this.props.navigator.push({
+            id : "Third"
+        });
+    }
 
     render(){
         return(
@@ -36,7 +41,10 @@ export default class Index extends Component{
                         Second Animation --->
                     </Text>
                 </TouchableOpacity>
-                <TouchableOpacity style = {styles.ThirdAnimation}>
+                <TouchableOpacity             
+                    style = {styles.ThirdAnimation}
+                    onPress = {this._onPressThird.bind(this)}  
+                >
                     <Text style = {styles.TextFont}>
                         Third Animation --->
                     </Text>
