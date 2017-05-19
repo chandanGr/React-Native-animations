@@ -31,6 +31,11 @@ export default class Index extends Component{
             id : "Fifth"
         });
     }
+    _onPressSixth(){
+        this.props.navigator.push({
+            id : "Sixth"
+        });
+    }
 
     render(){
         return(
@@ -74,6 +79,14 @@ export default class Index extends Component{
                 >
                     <Text style = {styles.TextFont}>
                         Animated.sequence
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity             
+                    style = {styles.SixthAnimation}
+                    onPress = {this._onPressSixth.bind(this)}  
+                >
+                    <Text style = {styles.TextFont}>
+                        Animated.stagger
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -122,6 +135,13 @@ var styles = StyleSheet.create({
     FifthAnimation : {
         flex : 1,
         backgroundColor : "#5D6D7E",
+        justifyContent : "center",
+        alignItems : "center",
+        height : 200,
+    },
+    SixthAnimation : {
+        flex : 1,
+        backgroundColor : "#5B2C6F",
         justifyContent : "center",
         alignItems : "center",
         height : 200,
