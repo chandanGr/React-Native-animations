@@ -26,10 +26,15 @@ export default class Index extends Component{
             id : "Fourth"
         });
     }
+    _onPressFifth(){
+        this.props.navigator.push({
+            id : "Fifth"
+        });
+    }
 
     render(){
         return(
-           // <ScrollView>
+            <ScrollView>
                 <View style = {styles.container}>
                 <TouchableOpacity 
                     style = {styles.FirstAnimation}
@@ -63,8 +68,16 @@ export default class Index extends Component{
                         Animated.parallel
                     </Text>
                 </TouchableOpacity>
+                <TouchableOpacity             
+                    style = {styles.FifthAnimation}
+                    onPress = {this._onPressFifth.bind(this)}  
+                >
+                    <Text style = {styles.TextFont}>
+                        Animated.sequence
+                    </Text>
+                </TouchableOpacity>
             </View>
-         //   </ScrollView>
+        </ScrollView>
         );
     }
 }
@@ -78,19 +91,22 @@ var styles = StyleSheet.create({
         backgroundColor : "#3498DB",
         justifyContent : "center",
         alignItems : "center",
+        height : 200, 
     },
     SecondAnimation : {
         flex : 1,
         backgroundColor : "#2ECC71",
         justifyContent : "center",
         alignItems : "center",  
-        paddingLeft : 50    
+        paddingLeft : 50,
+        height : 200,    
     },
     ThirdAnimation : {
         flex : 1,
         backgroundColor : "#E67E22",
         justifyContent : "center",
         alignItems : "center",
+        height : 200,
     },
     TextFont : {
         fontSize : 35,
@@ -101,5 +117,13 @@ var styles = StyleSheet.create({
         backgroundColor : "#BDC3C7",
         justifyContent : "center",
         alignItems : "center",
+        height : 200,
+    },
+    FifthAnimation : {
+        flex : 1,
+        backgroundColor : "#5D6D7E",
+        justifyContent : "center",
+        alignItems : "center",
+        height : 200,
     },
 });
