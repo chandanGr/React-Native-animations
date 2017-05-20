@@ -10,6 +10,7 @@ import Fourth from "./src/Fourth"
 import Fifth from "./src/Fifth"
 import Sixth from "./src/Sixth"
 import One from "./src/One"
+import Two from "./src/Two"
 
 
 export default class animation extends Component {
@@ -33,6 +34,8 @@ export default class animation extends Component {
         return(<Sixth navigator = {navigator} title = "Sixth animation" />);
       case "One":
         return (<One navigator = {navigator} title = "example one" />); 
+      case "Two":
+        return (<Two navigator = {navigator} title = "example two" />); 
     }
   }
 

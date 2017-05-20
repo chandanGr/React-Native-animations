@@ -15,7 +15,7 @@ export default class One extends Component{
 
         Animated.timing(this.animatedValue, {
             toValue : 1, 
-            duration : 300,
+            duration : 2000,
         }).start();
     }
     _onPress(){
@@ -25,16 +25,16 @@ export default class One extends Component{
 
     render(){
         const rotate = this.animatedValue.interpolate({
-            inputRange : [0, 1],
-            outputRange : ["0deg", "20deg"]
+            inputRange : [0, 0.3, 0.6, 1],
+            outputRange : ["0deg", "20deg", "20deg", "0deg"]
         });
         const translateX = this.animatedValue.interpolate({
-            inputRange : [0, 1],
-            outputRange : [0, 200]
+            inputRange : [0, 0.3, 0.6, 1],
+            outputRange : [0, 200, 200, 0]
         });
         const translateY = this.animatedValue.interpolate({
-            inputRange : [0, 1],
-            outputRange : [0, 150]
+            inputRange : [0, 0.3, 0.6, 1],
+            outputRange : [0, 150, 150, 0]
         });
 
         return(

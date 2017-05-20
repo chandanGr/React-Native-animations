@@ -43,6 +43,11 @@ export default class Index extends Component{
             id : "One"
         });
     }
+    _onPressTwo(){
+        this.props.navigator.push({
+            id : "Two"
+        });
+    }
 
     render(){
         return(
@@ -103,13 +108,21 @@ export default class Index extends Component{
                 </ScrollView>  
                 <Body /> 
                 <ScrollView>
-                    <View>
+                    <View style = {{flexDirection : "row"}}>
                         <TouchableOpacity             
                         style = {styles.OneAnimation}
                         onPress = {this._onPressOne.bind(this)}  
                         >
                         <Text style = {styles.TextFont}>
                             Example 1
+                        </Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity             
+                        style = {styles.TwoAnimation}
+                        onPress = {this._onPressTwo.bind(this)}  
+                        >
+                        <Text style = {styles.TextFont}>
+                            Example 2
                         </Text>
                         </TouchableOpacity>
                     </View>
@@ -197,4 +210,13 @@ var styles = StyleSheet.create({
         width : 200, 
         margin : 3
     },
+    TwoAnimation : {
+        flex : .5,
+        backgroundColor : "#154360",
+        justifyContent : "center",
+        alignItems : "center",
+        height : 120,
+        width : 200, 
+        margin : 3
+    }
 });
