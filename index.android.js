@@ -9,6 +9,8 @@ import Third from "./src/Third"
 import Fourth from "./src/Fourth"
 import Fifth from "./src/Fifth"
 import Sixth from "./src/Sixth"
+import One from "./src/One"
+
 
 export default class animation extends Component {
 
@@ -29,19 +31,20 @@ export default class animation extends Component {
         return (<Fifth navigator = {navigator} title = "Fifth animation" />);
       case "Sixth": 
         return(<Sixth navigator = {navigator} title = "Sixth animation" />);
+      case "One":
+        return (<One navigator = {navigator} title = "example one" />); 
     }
   }
 
   render(){
     return (
-      <Navigator
+        <Navigator
         initialRoute = {{
           id : "Index"
         }}
         renderScene = {
           this.navigationRenderScene
-        }
-      />
+        }/>
     );
   }
 

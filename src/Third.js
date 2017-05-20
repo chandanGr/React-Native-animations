@@ -16,7 +16,7 @@ export default class Third extends Component{
         this.animateValue.setValue(0);
         Animated.spring(this.animateValue, {
             toValue : 1, 
-            friction : 3,
+            friction : 1,
         }).start(() => this.animate());
     }
     BackPress(){
